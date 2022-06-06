@@ -11,12 +11,21 @@ Features to be Implemented
 -Get Users - get all users
 -Get Items - gets all items that are available in store // complete
 -Add Item to Cart - adds selected item to the cart
+
+
 -Spring http security with default user:jay password:tiger
 -http://localhost:8099
+Users
 - POST: http://localhost:8099/users
 - GET: http://localhost:8099/{userId}
 - PUT: http://localhost:8099
 - DELETE: http://localhost:8099/{userId}
+
+Products
+- POST: http://localhost:8099/products
+- GET: http://localhost:8099/{productId}
+- PUT: http://localhost:8099
+- DELETE: http://localhost:8099/{productId}
 
 -ADMIN login for application: user: jayden password: tiger
 // disabled by comment for ease of testing on UserController
