@@ -17,6 +17,7 @@ Features to be Implemented
 -http://localhost:8099
 Users
 - POST: http://localhost:8099/users
+// GET user along with CART items:
 - GET: http://localhost:8099/{userId}
 - PUT: http://localhost:8099
 - DELETE: http://localhost:8099/{userId}
