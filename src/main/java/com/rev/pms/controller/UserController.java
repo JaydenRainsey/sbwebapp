@@ -68,7 +68,7 @@ public class UserController {
 
 
     // Get all users
-    //@Authorized(allowedRoles = {Role.ADMIN})
+    @Authorized(allowedRoles = {Role.ADMIN})
     @GetMapping     //localhost:8099/users
     public ResponseEntity<List<User>> getUsers(){
         ResponseEntity responseEntity = null;
@@ -97,7 +97,7 @@ public class UserController {
         return responseEntity;
     }
     //@Authorized(allowedRoles = {Role.ADMIN})
-    @PutMapping             //localhost:8080/user, @PutMapping used for "Update"
+    @PutMapping             //localhost:8099/users, @PutMapping used for "Update"
     public ResponseEntity<String> updateUser(@RequestBody User user){
         ResponseEntity responseEntity = null;
         System.out.println("Updating details of :" + user);
@@ -108,7 +108,7 @@ public class UserController {
 
 
     //@Authorized(allowedRoles = {Role.ADMIN})
-    @DeleteMapping ("{uId}")         //localhost:8080/user, @DeleteMapping used for "Delete"
+    @DeleteMapping ("{uId}")         //localhost:8099/users, @DeleteMapping used for "Delete"
     public ResponseEntity<String> userDelete(@PathVariable("uId")int userId){
         System.out.println("Deleting details  by user id  :" + userId);
         ResponseEntity<String> responseEntity;
