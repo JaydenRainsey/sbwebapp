@@ -11,6 +11,6 @@ public class CartController {
 
     @GetMapping
     public String welcomeMsg(){
-        return "Welcome to my Cart application";
+        return "Welcome to my Cart application, deployment automated by Jenkins";
     }
 }
