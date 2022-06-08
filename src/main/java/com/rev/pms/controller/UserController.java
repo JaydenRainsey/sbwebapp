@@ -68,7 +68,7 @@ public class UserController {
 
 
     // Get all users
-    @Authorized(allowedRoles = {Role.ADMIN})
+    //@Authorized(allowedRoles = {Role.ADMIN})
     @GetMapping     //localhost:8099/users
     public ResponseEntity<List<User>> getUsers(){
         ResponseEntity responseEntity = null;
