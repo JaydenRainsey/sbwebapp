@@ -59,7 +59,7 @@ public class UserController {
             result = userService.addUser(user);
             if (result) {
                 responseEntity = new ResponseEntity<String>
-                        ("Successfully Saved your user ID: " + user.getUserId(), HttpStatus.OK);        //200
+                        ("Successfully Saved user ID: " + user.getUserId(), HttpStatus.OK);        //200
                 LOGGER.info("User with user id: "+user.getUserId()+ " saved successfully");
             }
         }
@@ -68,8 +68,8 @@ public class UserController {
 
 
     // Get all users
-    //@Authorized(allowedRoles = {Role.ADMIN})
-    @GetMapping     //localhost:8099/users
+    @Authorized(allowedRoles = {Role.ADMIN})
+    @GetMapping     //localhost:8082/users
     public ResponseEntity<List<User>> getUsers(){
         ResponseEntity responseEntity = null;
         List<User> users = new ArrayList<User>();
@@ -79,7 +79,7 @@ public class UserController {
 
     // Get user by userId
     //@Authorized(allowedRoles = {Role.ADMIN})
-    @GetMapping("{uId}")     //localhost:8099/users/{uId}
+    @GetMapping("{uId}")     //localhost:8082/users/{uId}
     public ResponseEntity<User> getUser(@PathVariable("uId") int userId) {
         System.out.println("Fetching details for user id  :" + userId);
         //call the methods to fetch user details of this user id
