@@ -11,6 +11,6 @@ public class CartController {
 
     @GetMapping
     public String welcomeMsg(){
-        return "Welcome to my Cart application, deployment automated (push to github)";
+        return "Welcome to my e-commerce application, deployment automated (push to github)";
     }
 }
